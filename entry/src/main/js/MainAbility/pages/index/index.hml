@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="display-area" @click="openKeyboard">
+        <text class="input-text">{{ inputText || 'Type...' }}</text>
+        <div class="cursor" if="{{ showCursor }}"></div>
+    </div>
+
+    <div class="keyboard" if="{{ showKeyboard }}">
+        <div class="keyboard-grid">
+            <div class="key-row" for="{{ currentRows }}">
+                <div class="key "
+                     for="{{ $item.keys }}"
+                     onclick="handleKeyPress($item)">
+                    <text class="key-text">{{ $item.value }}</text>
+                </div>
+
+            </div>
+            <div class="key-row">
+                <div class="key">
+                    <text class="key-text" @click="letterKeys">ABC</text>
+                </div>
+                <div class="key">
+                    <text class="key-text" @click="numKeys">123</text>
+                </div>
+                <div class="key">
+                    <text class="key-text" @click="symKeys">@!?</text>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
