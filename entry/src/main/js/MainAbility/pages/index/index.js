@@ -80,7 +80,7 @@ export default {
                     { label: 'F', value: 'f', type: '' },
                     { label: 'G', value: 'g', type: '' },
                     { label: 'H', value: 'h', type: '' },
-                    { label: 'J', value: 'j', type: '' },
+                    { label: 'J', value: 'j', type: '' }
                 ]
             },
             {
@@ -109,14 +109,14 @@ export default {
                 keys: [
                     { label: ' ', value: 'space' },
                     { label: 'Del', value: 'del' },
-                    { label: 'OK', value: 'ok' },
+                    { label: 'OK', value: 'ok' }
                 ]
             }
-        ],
+        ]
     },
 
     onInit() {
-        console.log('Virtual Keyboard initialized');
+        console.info('Virtual Keyboard initialized');
         this.currentRows = this.letterRows;
         this.startCursorBlink();
     },
@@ -166,7 +166,7 @@ export default {
     },
 
     handleSubmit() {
-        console.log('Submitted text:' + this.inputText);
+        console.info(`Submitted text: ${this.inputText}`);
         this.vibrate(200);
         this.closeKeyboard()
     },
@@ -207,7 +207,7 @@ export default {
     },
 
     vibrate(duration = 50) {
-        console.log('Vibrate:' + duration);
+        console.info(`Vibrate: ${duration}`);
     },
 
     openKeyboard() {
@@ -219,6 +219,6 @@ export default {
     },
 
     onDestroy() {
-        console.log('Keyboard destroyed');
+        console.info('Keyboard destroyed');
     }
 };

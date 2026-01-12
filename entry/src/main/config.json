@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.virtual_keyboard",
+    "bundleName": "com.hmosdemos.lite_wearable.sportwatch_virtual_keyboard",
     "vendor": "hmosdemos",
     "version": {
       "code": 1000000,
